@@ -1,0 +1,241 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  height: 100%;
+}
+
+.page {
+  min-height: 100%;
+  background: #1b1b1d;
+  background-image: url('/фон.png');
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: cover;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(1100px 800px at 55% 20%, rgba(255, 255, 255, 0.04), rgba(0, 0, 0, 0));
+  pointer-events: none;
+}
+
+.top {
+  position: absolute;
+  top: 36px;
+  left: 80px;
+  right: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.brandIcon {
+  width: 42px;
+  height: 47px;
+  flex: 0 0 auto;
+}
+
+.brandText {
+  font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 16px;
+  -webkit-text-stroke: 0;
+  text-shadow: none;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  min-height: 100%;
+}
+
+.title {
+  position: absolute;
+  left: 80px;
+  top: 346px;
+  margin: 0;
+  font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.subtitle {
+  position: absolute;
+  left: 80px;
+  top: 450px;
+  margin: 0;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.2;
+  opacity: 0.9;
+}
+
+.primary {
+  position: absolute;
+  left: 80px;
+  top: 530px;
+}
+
+.btn {
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  background: #7b61ff;
+  color: #ffffff;
+  border-radius: 100px;
+  padding: 16px 32px;
+  min-width: 370px;
+  font-size: 20px;
+  line-height: 1;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+.btn:hover {
+  filter: brightness(1.05);
+}
+
+.btn:active {
+  filter: brightness(0.95);
+}
+
+.btnSmall {
+  min-width: auto;
+  width: fit-content;
+  padding: 16px 32px;
+}
+
+.hint {
+  position: absolute;
+  left: 164px;
+  top: 618px;
+  margin: 0;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.2;
+  opacity: 0.95;
+}
+
+.downloads {
+  position: absolute;
+  left: 80px;
+  top: 666px;
+}
+
+.downloadsTitle {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  opacity: 0.95;
+}
+
+.osList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 220px;
+}
+
+.osItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.osIcon {
+  width: 32px;
+  height: 32px;
+  display: block;
+  opacity: 0.55;
+}
+
+.osText {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.2;
+  opacity: 0.8;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.androidIcon {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  display: block;
+  opacity: 0.55;
+}
+
+.androidOverlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1100px) {
+  .top {
+    left: 24px;
+    right: 24px;
+  }
+
+  .title {
+    left: 24px;
+    top: 180px;
+    font-size: 56px;
+  }
+
+  .subtitle {
+    left: 24px;
+    top: 260px;
+  }
+
+  .primary {
+    left: 24px;
+    top: 340px;
+  }
+
+  .hint {
+    left: 108px;
+    top: 430px;
+  }
+
+  .btn {
+    min-width: 260px;
+  }
+
+  .downloads {
+    left: 24px;
+    top: 480px;
+  }
+}
